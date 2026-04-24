@@ -18,7 +18,40 @@ The page tells the story of EMLink's AI Education Platform, built for students i
 
 | File | Description |
 |------|-------------|
-| `emlink-mission-white-v26.html` | Single-file landing page (self-contained, no dependencies) |
+| `index.html` | Single-file landing page (self-contained, no dependencies) |
+
+---
+
+## How to Deploy
+
+### Option 1 — GitHub Pages (Recommended)
+
+1. Fork or clone this repository
+2. Go to **Settings → Pages**
+3. Set source to `main` branch, root folder
+4. Make sure the file is named `index.html`
+5. Your page will be live at `https://yourusername.github.io/repo-name`
+
+### Option 2 — Netlify (Drag & Drop)
+
+1. Go to [netlify.com](https://netlify.com) and sign in
+2. Drag the `index.html` file into the deploy zone
+3. Your site goes live instantly with a Netlify subdomain
+
+### Option 3 — Any Static Host (VPS, cPanel, Hostinger, etc.)
+
+1. Upload `index.html` to the `public_html` or `www` root directory
+2. Point your domain DNS to the host
+
+---
+
+## Tech Stack
+
+- **Pure HTML + CSS + JavaScript** — zero frameworks, zero dependencies
+- Logo embedded as base64 — no external image requests
+- Fonts loaded via Google Fonts CDN
+- Fully responsive for desktop and mobile
+- No build step required — open the file and it works
 
 ---
 
@@ -64,16 +97,16 @@ Search for `info@emlinkapp.com` to update the footer contact email.
 
 ## Founders
 
-**Emmanuel Naweji** — CEO & Co-Founder  
+**Emmanuel Naweji** — CEO & Co-Founder
 Born in Belgium, raised in Kolwezi, DR Congo. Based in Sioux Falls, South Dakota, USA.
 
-**Jean Gilbert Mbula Mboma** — CTO & Co-Founder  
+**Jean Gilbert Mbula Mboma** — CTO & Co-Founder
 Based in Kinshasa, DR Congo. Leads all platform architecture and engineering.
 
 ---
 
 ## Legal
 
-**Patent Pending** · © 2026 EMLink · All Rights Reserved  
-Website: [emlinkapp.com](https://www.emlinkapp.com)  
+**Patent Pending** · © 2026 EMLink · All Rights Reserved
+Website: [emlinkapp.com](https://www.emlinkapp.com)
 Contact: info@emlinkapp.com
