@@ -17,7 +17,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 .screen{display:none;min-height:100vh}.screen.active{display:block}
 /* LANG BAR */
-.lang-bar{position:fixed;top:0;right:0;z-index:9999;padding:10px 20px;display:flex;gap:6px}
+.lang-bar{display:none}
 .lang-btn{background:white;border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.08em;cursor:pointer;font-family:var(--body);transition:all .2s}
 .lang-btn.active{background:var(--ink);color:white;border-color:var(--ink)}
 /* NAV */
@@ -26,13 +26,13 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 .nav-logo{font-family:var(--serif);font-size:24px;font-weight:700;cursor:pointer;color:var(--ink)}
 .nav-logo span{color:var(--red)}
 .nav-links{display:flex;align-items:center;gap:28px}
-.nl{font-size:13px;color:var(--muted);cursor:pointer;letter-spacing:.04em;transition:color .2s;text-decoration:none;background:none;border:none;font-family:var(--body)}
+.nl{font-size:15px;color:var(--muted);cursor:pointer;letter-spacing:.04em;transition:color .2s;text-decoration:none;background:none;border:none;font-family:var(--body)}
 .nl:hover{color:var(--ink)}
-.btn-cta{background:var(--red);color:white!important;padding:9px 22px;font-size:12px;font-weight:700;letter-spacing:.06em;cursor:pointer;border:none;font-family:var(--body);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);transition:background .2s}
+.btn-cta{background:var(--red);color:white!important;padding:10px 24px;font-size:13px;font-weight:700;letter-spacing:.06em;cursor:pointer;border:none;font-family:var(--body);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);transition:background .2s}
 .btn-cta:hover,.btn-red:hover{background:var(--red2)}
 .badge-pro{background:var(--red);color:white;font-size:9px;font-weight:700;padding:2px 7px;letter-spacing:.1em}
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-size:13px;font-weight:700;letter-spacing:.06em;cursor:pointer;border:none;font-family:var(--body);transition:all .2s;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-size:14px;font-weight:700;letter-spacing:.06em;cursor:pointer;border:none;font-family:var(--body);transition:all .2s;text-decoration:none}
 .btn-red{background:var(--red);color:white;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
 .btn-navy{background:var(--navy);color:white;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
 .btn-navy:hover{background:var(--navy2)}
@@ -52,12 +52,12 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 .card{background:white;border:1px solid var(--border);padding:28px}
 .card-sm{background:white;border:1px solid var(--border);padding:20px}
 /* TYPE */
-.over{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.over{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
 .ttl{font-family:var(--serif);font-size:40px;font-weight:700;line-height:1.15;margin-bottom:20px}
 .ttl em,.ttl2 em,.h-title em{font-style:italic;color:var(--red)}
-.sub{font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:32px}
+.sub{font-size:17px;color:var(--muted);line-height:1.7;margin-bottom:32px}
 /* PILLS */
-.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;font-size:11px;font-weight:600;letter-spacing:.08em;border-radius:2px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;font-size:12px;font-weight:600;letter-spacing:.08em;border-radius:2px}
 .pill-red{background:#fef2f2;color:var(--red)}
 .pill-green{background:#f0fdf4;color:var(--green)}
 .pill-navy{background:#eef2ff;color:var(--navy)}
@@ -71,7 +71,7 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 .msg.user .msg-bubble{background:var(--red);color:white;border-radius:12px 0 12px 12px}
 .msg-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--serif);font-weight:700;font-size:12px;color:white}
 .chat-input-row{display:flex;gap:12px;padding:16px 24px;border-top:1px solid var(--border)}
-.chat-input-row input{flex:1;padding:12px 16px;border:1px solid var(--border);font-family:var(--body);font-size:14px;outline:none}
+.chat-input-row input{flex:1;padding:12px 16px;border:1px solid var(--border);font-family:var(--body);font-size:15px;outline:none}
 .chat-input-row input:focus{border-color:var(--red)}
 .typing{display:flex;gap:4px;align-items:center;padding:14px 18px}
 .dot{width:6px;height:6px;background:var(--muted);border-radius:50%;animation:bounce .8s infinite}
@@ -89,7 +89,7 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 /* HOME SECTIONS */
 .sec{padding:96px 56px}
 .wrap{max-width:1100px;margin:0 auto}
-.o2{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.o2{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
 .ttl2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.1;margin-bottom:24px}
 .bod{font-size:16px;color:var(--muted);line-height:1.8;max-width:680px;margin-bottom:32px}
 /* MISSION BAR */
@@ -100,7 +100,7 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 /* STAT STRIP */
 .sstrip{background:var(--red);color:white;padding:48px 56px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
 .snum{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:700;line-height:1}
-.slbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:8px;opacity:.8}
+.slbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-top:8px;opacity:.8}
 /* GAP */
 .gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px}
 .gap-side{padding:40px;border:1px solid var(--border)}
@@ -113,7 +113,7 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 .plat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:48px}
 .plat-card{border:1px solid var(--border);padding:36px;background:white}
 .plat-n{font-family:var(--serif);font-size:56px;font-weight:700;color:var(--border);line-height:1;margin-bottom:16px}
-.plat-tag{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.plat-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
 .plat-t{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:10px}
 .plat-d{font-size:14px;color:var(--muted);line-height:1.7}
 /* FLYWHEEL */
@@ -122,7 +122,7 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 .fly-item:last-child{border-right:none}
 .fly-arr{position:absolute;right:-14px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--red);z-index:1}
 .fly-n{font-family:var(--serif);font-size:44px;font-weight:700;color:var(--border);margin-bottom:12px}
-.fly-t{font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:8px}
+.fly-t{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:8px}
 .fly-d{font-size:13px;color:var(--muted);line-height:1.6}
 /* VISION */
 .vsec{background:var(--navy);color:white;padding:96px 56px;text-align:center}
@@ -133,16 +133,16 @@ body{font-family:var(--body);background:var(--bg);color:var(--ink)}
 .fc-card{border:1px solid var(--border);padding:40px;background:white}
 .fc-av{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;font-weight:700;color:white;margin-bottom:20px}
 .fc-name{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:4px}
-.fc-role{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase;margin-bottom:6px}
-.fc-loc{font-size:13px;color:var(--muted);margin-bottom:14px}
+.fc-role{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+.fc-loc{font-size:14px;color:var(--muted);margin-bottom:14px}
 .fc-bio{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:18px}
 .fc-tags{display:flex;flex-wrap:wrap;gap:8px}
 .fc-tag{font-size:10px;font-weight:700;letter-spacing:.08em;background:var(--bg);padding:4px 10px;color:var(--muted)}
 /* REVENUE */
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
 .rev-card{border:1px solid var(--border);padding:32px;background:white}
-.rev-phase{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
-.rev-t{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:10px}
+.rev-phase{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.rev-t{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:10px}
 .rev-d{font-size:13px;color:var(--muted);line-height:1.7}
 /* CTA */
 .cta-sec{background:var(--ink);color:white;padding:96px 56px;text-align:center}
@@ -158,8 +158,8 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
 .module-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
 .module-card.locked{opacity:.65}
 .module-icon{font-size:36px;margin-bottom:16px}
-.module-title{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:6px}
-.module-sub{font-size:11px;font-weight:700;letter-spacing:.1em;margin-bottom:10px}
+.module-title{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:6px}
+.module-sub{font-size:12px;font-weight:700;letter-spacing:.1em;margin-bottom:10px}
 .module-desc{font-size:13px;color:var(--muted);line-height:1.6}
 .lock-tag{position:absolute;top:16px;right:16px;background:#f3f4f6;font-size:10px;font-weight:700;letter-spacing:.08em;padding:3px 10px;color:var(--muted)}
 /* PROGRESS */
@@ -172,9 +172,9 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
 .price-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
 .price-num{font-family:var(--serif);font-size:64px;font-weight:700;line-height:1}
 .price-num sup{font-size:26px;vertical-align:top;margin-top:8px}
-.price-per{font-size:13px;color:var(--muted);margin-top:6px}
+.price-per{font-size:14px;color:var(--muted);margin-top:6px}
 .pfeat{list-style:none;margin:28px 0;display:flex;flex-direction:column;gap:10px}
-.pfeat li{font-size:14px;padding:8px 0;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:10px}
+.pfeat li{font-size:15px;padding:8px 0;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:10px}
 .pfeat li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0}
 .best-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--red);color:white;font-size:10px;font-weight:700;letter-spacing:.12em;padding:4px 16px}
 /* SUCCESS */
@@ -195,10 +195,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
 </style>
 </head>
 <body>
-<div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('fr')">FR</button>
-  <button class="lang-btn" onclick="setLang('en')">EN</button>
-</div>
+
 
 <!-- ══ HOME ══ -->
 <div id="screen-home" class="screen active">
@@ -210,11 +207,15 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
     <span class="pat">⚖ <span data-fr="Brevet en cours" data-en="Patent Pending">Brevet en cours</span></span>
   </div>
   <div style="display:flex;align-items:center;gap:32px">
-    <a href="#story" style="font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Histoire" data-en="Story">Histoire</a>
-    <a href="#platform" style="font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Plateforme" data-en="Platform">Plateforme</a>
-    <a href="#founders" style="font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Fondateurs" data-en="Founders">Fondateurs</a>
-    <button onclick="goTo('project-management')" style="font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--body);letter-spacing:.04em" data-fr="Gestion de Projet" data-en="Project Management">Gestion de Projet</button>
-    <button onclick="goTo('pricing')" style="font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--body);letter-spacing:.04em" data-fr="Tarifs" data-en="Pricing">Tarifs</button>
+    <a href="#story" style="font-size:15px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Histoire" data-en="Story">Histoire</a>
+    <a href="#platform" style="font-size:15px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Plateforme" data-en="Platform">Plateforme</a>
+    <a href="#founders" style="font-size:15px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Fondateurs" data-en="Founders">Fondateurs</a>
+    <button onclick="goTo('pricing')" style="font-size:15px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--body);letter-spacing:.04em" data-fr="Tarifs" data-en="Pricing">Tarifs</button>
+    <!-- LANG TOGGLE in nav center -->
+    <div style="display:flex;gap:6px;align-items:center">
+      <button class="lang-btn active" onclick="setLang('fr')" style="font-size:12px;padding:5px 14px">FR</button>
+      <button class="lang-btn" onclick="setLang('en')" style="font-size:12px;padding:5px 14px">EN</button>
+    </div>
     <button onclick="goTo('login')" class="btn-cta" data-fr="Lancer l'app →" data-en="Launch App →">Lancer l'app →</button>
   </div>
 </nav>
@@ -224,7 +225,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
   <div class="h-eye" data-fr="EMLink · Plateforme IA · Éducation" data-en="EMLink · AI Platform · Education">EMLink · Plateforme IA · Éducation</div>
   <h1 class="h-title" data-fr="Aucun jeune<br><em>laissé pour compte.</em>" data-en="No youth<br><em>left behind.</em>">Aucun jeune<br><em>laissé pour compte.</em></h1>
   <div class="h-sub" data-fr="Pas à Kolwezi. Pas à Kinshasa. Nulle part." data-en="Not in Kolwezi. Not in Kinshasa. Not anywhere.">Pas à Kolwezi. Pas à Kinshasa. Nulle part.</div>
-  <p class="h-body" data-fr="Un étudiant à Kinshasa qui prépare l'Examen d'État mérite les mêmes outils IA qu'un étudiant à Sioux Falls, Paris ou Toronto. EMLink construit cet avenir — aujourd'hui." data-en="A student in Kinshasa preparing for the Examen d'État deserves the same AI tools as a student in Sioux Falls, Paris, or Toronto. EMLink is building that future — today.">Un étudiant à Kinshasa qui prépare l'Examen d'État mérite les mêmes outils IA qu'un étudiant à Sioux Falls, Paris ou Toronto. EMLink construit cet avenir — aujourd'hui.</p>
+  <p class="h-body" style="font-size:18px" data-fr="Un étudiant à Kinshasa qui prépare l'Examen d'État mérite les mêmes outils IA qu'un étudiant à Sioux Falls, Paris ou Toronto. EMLink construit cet avenir — aujourd'hui." data-en="A student in Kinshasa preparing for the Examen d'État deserves the same AI tools as a student in Sioux Falls, Paris, or Toronto. EMLink is building that future — today.">Un étudiant à Kinshasa qui prépare l'Examen d'État mérite les mêmes outils IA qu'un étudiant à Sioux Falls, Paris ou Toronto. EMLink construit cet avenir — aujourd'hui.</p>
   <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center">
     <button onclick="goTo('login')" class="btn btn-red" data-fr="See EMLink Live →" data-en="See EMLink Live →">See EMLink Live →</button>
     <button onclick="goTo('pricing')" class="btn btn-outline" data-fr="Voir les tarifs" data-en="See Pricing">Voir les tarifs</button>
@@ -245,7 +246,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
   <div class="wrap">
     <div class="o2" data-fr="Notre Histoire" data-en="Our Story">Notre Histoire</div>
     <h2 class="ttl2" data-fr="Une mission née de la <em>vie réelle.</em>" data-en="A mission born from <em>real life.</em>">Une mission née de la <em>vie réelle.</em></h2>
-    <p class="bod" data-fr="Deux fondateurs. Deux pays. Une conviction : aucun jeune ne devrait avoir son avenir déterminé par l'endroit où il est né." data-en="Two founders. Two countries. One conviction: no youth should have their future determined by where they were born.">Deux fondateurs. Deux pays. Une conviction : aucun jeune ne devrait avoir son avenir déterminé par l'endroit où il est né.</p>
+    <p class="bod" style="font-size:17px" data-fr="Deux fondateurs. Deux pays. Une conviction : aucun jeune ne devrait avoir son avenir déterminé par l'endroit où il est né." data-en="Two founders. Two countries. One conviction: no youth should have their future determined by where they were born.">Deux fondateurs. Deux pays. Une conviction : aucun jeune ne devrait avoir son avenir déterminé par l'endroit où il est né.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px">
       <div style="display:flex;gap:20px;align-items:flex-start">
         <div style="font-size:28px;flex-shrink:0">🇧🇪🇨🇩</div>
@@ -270,22 +271,22 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
   <div class="wrap">
     <div class="o2" data-fr="Le Problème" data-en="The Problem">Le Problème</div>
     <h2 class="ttl2" data-fr="Deux étudiants.<br><em>Un monde de différence.</em>" data-en="Two students.<br><em>A world of difference.</em>">Deux étudiants.<br><em>Un monde de différence.</em></h2>
-    <p class="bod" data-fr="Un étudiant à Sioux Falls a accès à des tuteurs IA, préparateurs d'examens et conseillers en carrière 24h/24. Un étudiant à Kinshasa n'a accès à rien de tout cela. EMLink ferme cet écart." data-en="A student in Sioux Falls has access to AI tutors, exam prep, and career advisors 24/7. A student in Kinshasa has access to none of it. EMLink closes that gap.">Un étudiant à Sioux Falls a accès à des tuteurs IA, préparateurs d'examens et conseillers en carrière 24h/24. Un étudiant à Kinshasa n'a accès à rien de tout cela. EMLink ferme cet écart.</p>
+    <p class="bod" style="font-size:17px" data-fr="Un étudiant à Sioux Falls a accès à des tuteurs IA, préparateurs d'examens et conseillers en carrière 24h/24. Un étudiant à Kinshasa n'a accès à rien de tout cela. EMLink ferme cet écart." data-en="A student in Sioux Falls has access to AI tutors, exam prep, and career advisors 24/7. A student in Kinshasa has access to none of it. EMLink closes that gap.">Un étudiant à Sioux Falls a accès à des tuteurs IA, préparateurs d'examens et conseillers en carrière 24h/24. Un étudiant à Kinshasa n'a accès à rien de tout cela. EMLink ferme cet écart.</p>
     <div class="gap-grid">
       <div class="gap-side">
         <div class="gap-tag" data-fr="KINSHASA · KOLWEZI · AVANT EMLINK" data-en="KINSHASA · KOLWEZI · BEFORE EMLINK">KINSHASA · KOLWEZI · AVANT EMLINK</div>
-        <div class="gi">❌ <span data-fr="Aucun tuteur IA disponible" data-en="No AI tutor available">Aucun tuteur IA disponible</span></div>
-        <div class="gi">❌ <span data-fr="Pas de préparation aux examens" data-en="No structured exam preparation">Pas de préparation aux examens</span></div>
-        <div class="gi">❌ <span data-fr="Pas de conseiller en orientation" data-en="No career guidance counselor">Pas de conseiller en orientation</span></div>
-        <div class="gi">❌ <span data-fr="Pas d'aide pour les CV" data-en="No resume assistance">Pas d'aide pour les CV</span></div>
+        <div class="gi" style="font-size:15px">❌ <span data-fr="Aucun tuteur IA disponible" data-en="No AI tutor available">Aucun tuteur IA disponible</span></div>
+        <div class="gi" style="font-size:15px">❌ <span data-fr="Pas de préparation aux examens" data-en="No structured exam preparation">Pas de préparation aux examens</span></div>
+        <div class="gi" style="font-size:15px">❌ <span data-fr="Pas de conseiller en orientation" data-en="No career guidance counselor">Pas de conseiller en orientation</span></div>
+        <div class="gi" style="font-size:15px">❌ <span data-fr="Pas d'aide pour les CV" data-en="No resume assistance">Pas d'aide pour les CV</span></div>
         <div class="gi" style="border-bottom:none">❌ <span data-fr="Accès internet limité" data-en="Limited internet access">Accès internet limité</span></div>
       </div>
       <div class="gap-side w">
         <div class="gap-tag" style="color:rgba(255,255,255,.5)" data-fr="SIOUX FALLS · PARIS · TORONTO" data-en="SIOUX FALLS · PARIS · TORONTO">SIOUX FALLS · PARIS · TORONTO</div>
-        <div class="gi">✅ <span data-fr="Tuteurs IA 24h/24" data-en="AI tutors 24/7">Tuteurs IA 24h/24</span></div>
-        <div class="gi">✅ <span data-fr="Préparation complète aux examens" data-en="Full exam preparation tools">Préparation complète aux examens</span></div>
-        <div class="gi">✅ <span data-fr="Orientation professionnelle IA" data-en="AI career guidance">Orientation professionnelle IA</span></div>
-        <div class="gi">✅ <span data-fr="Création de CV assistée par IA" data-en="AI-assisted resume creation">Création de CV assistée par IA</span></div>
+        <div class="gi" style="font-size:15px">✅ <span data-fr="Tuteurs IA 24h/24" data-en="AI tutors 24/7">Tuteurs IA 24h/24</span></div>
+        <div class="gi" style="font-size:15px">✅ <span data-fr="Préparation complète aux examens" data-en="Full exam preparation tools">Préparation complète aux examens</span></div>
+        <div class="gi" style="font-size:15px">✅ <span data-fr="Orientation professionnelle IA" data-en="AI career guidance">Orientation professionnelle IA</span></div>
+        <div class="gi" style="font-size:15px">✅ <span data-fr="Création de CV assistée par IA" data-en="AI-assisted resume creation">Création de CV assistée par IA</span></div>
         <div class="gi" style="border-bottom:none">✅ <span data-fr="Accès numérique complet" data-en="Full digital access">Accès numérique complet</span></div>
       </div>
     </div>
@@ -308,31 +309,31 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
   <div class="wrap">
     <div class="o2" data-fr="Ce que nous avons construit" data-en="What We've Built">Ce que nous avons construit</div>
     <h2 class="ttl2" data-fr="La plateforme <em>EMLink Student IA.</em>" data-en="The EMLink <em>Student AI Platform.</em>">La plateforme <em>EMLink Student IA.</em></h2>
-    <p class="bod" data-fr="Emmanuel et Jean Gilbert ont co-construit EMLink — Plateforme Éducative, Chat IA et Portail d'Emploi déjà en ligne. Le programme de mentorat Cohort est en cours. L'IA étudiant est la prochaine couche." data-en="Emmanuel and Jean Gilbert co-built EMLink — Education Platform, AI Chat, and Employment Portal already live. The Cohort mentorship program is underway. Student AI is the next focused layer.">Emmanuel et Jean Gilbert ont co-construit EMLink — Plateforme Éducative, Chat IA et Portail d'Emploi déjà en ligne. Le programme de mentorat Cohort est en cours. L'IA étudiant est la prochaine couche.</p>
+    <p class="bod" style="font-size:17px" data-fr="Emmanuel et Jean Gilbert ont co-construit EMLink — Plateforme Éducative, Chat IA et Portail d'Emploi déjà en ligne. Le programme de mentorat Cohort est en cours. L'IA étudiant est la prochaine couche." data-en="Emmanuel and Jean Gilbert co-built EMLink — Education Platform, AI Chat, and Employment Portal already live. The Cohort mentorship program is underway. Student AI is the next focused layer.">Emmanuel et Jean Gilbert ont co-construit EMLink — Plateforme Éducative, Chat IA et Portail d'Emploi déjà en ligne. Le programme de mentorat Cohort est en cours. L'IA étudiant est la prochaine couche.</p>
     <div class="plat-grid">
       <div class="plat-card">
         <div class="plat-n">01</div>
         <div class="plat-tag" style="color:var(--red)" data-fr="Lycée · Examen d'État" data-en="High School · State Exam">Lycée · Examen d'État</div>
         <div class="plat-t" data-fr="Préparation aux Examens IA" data-en="Exam Prep AI">Préparation aux Examens IA</div>
-        <p class="plat-d" data-fr="Aligné sur le programme EPST. Génère des questions de pratique en français, explique étape par étape, suit les points faibles et s'adapte automatiquement à chaque étudiant." data-en="Aligned to the EPST curriculum. Generates French-language practice questions, explains step by step, tracks weak areas and adapts automatically to each student.">Aligné sur le programme EPST. Génère des questions de pratique en français, explique étape par étape, suit les points faibles et s'adapte automatiquement à chaque étudiant.</p>
+        <p class="plat-d" style="font-size:15px" data-fr="Aligné sur le programme EPST. Génère des questions de pratique en français, explique étape par étape, suit les points faibles et s'adapte automatiquement à chaque étudiant." data-en="Aligned to the EPST curriculum. Generates French-language practice questions, explains step by step, tracks weak areas and adapts automatically to each student.">Aligné sur le programme EPST. Génère des questions de pratique en français, explique étape par étape, suit les points faibles et s'adapte automatiquement à chaque étudiant.</p>
       </div>
       <div class="plat-card">
         <div class="plat-n">02</div>
         <div class="plat-tag" style="color:var(--navy)" data-fr="Université · UNIKIN · UPC" data-en="University · UNIKIN · UPC">Université · UNIKIN · UPC</div>
         <div class="plat-t" data-fr="Assistant Universitaire" data-en="University Assistant">Assistant Universitaire</div>
-        <p class="plat-d" data-fr="Aide les étudiants à rédiger des travaux de recherche, structurer des arguments, préparer les examens oraux et écrits, et formater les citations — comblant le vide des campus sans centres d'écriture." data-en="Helps university students write research papers, structure arguments, prepare for oral and written exams, and format citations — filling the gap left by campuses without writing centers.">Aide les étudiants à rédiger des travaux de recherche, structurer des arguments, préparer les examens oraux et écrits, et formater les citations — comblant le vide des campus sans centres d'écriture.</p>
+        <p class="plat-d" style="font-size:15px" data-fr="Aide les étudiants à rédiger des travaux de recherche, structurer des arguments, préparer les examens oraux et écrits, et formater les citations — comblant le vide des campus sans centres d'écriture." data-en="Helps university students write research papers, structure arguments, prepare for oral and written exams, and format citations — filling the gap left by campuses without writing centers.">Aide les étudiants à rédiger des travaux de recherche, structurer des arguments, préparer les examens oraux et écrits, et formater les citations — comblant le vide des campus sans centres d'écriture.</p>
       </div>
       <div class="plat-card">
         <div class="plat-n">03</div>
         <div class="plat-tag" style="color:var(--green)" data-fr="Diplômé · Et après ?" data-en="Graduation · What's Next?">Diplômé · Et après ?</div>
         <div class="plat-t" data-fr="Conseiller en Parcours de Carrière" data-en="Career Path Advisor">Conseiller en Parcours de Carrière</div>
-        <p class="plat-d" data-fr="L'IA cartographie les forces de l'étudiant vers des filières universitaires, des bourses et des parcours de carrière — en français, culturellement pertinent, ancré localement en RDC." data-en="AI maps the student's strengths to university programs, scholarships, and career paths — in French, culturally relevant, locally grounded in DRC.">L'IA cartographie les forces de l'étudiant vers des filières universitaires, des bourses et des parcours de carrière — en français, culturellement pertinent, ancré localement en RDC.</p>
+        <p class="plat-d" style="font-size:15px" data-fr="L'IA cartographie les forces de l'étudiant vers des filières universitaires, des bourses et des parcours de carrière — en français, culturellement pertinent, ancré localement en RDC." data-en="AI maps the student's strengths to university programs, scholarships, and career paths — in French, culturally relevant, locally grounded in DRC.">L'IA cartographie les forces de l'étudiant vers des filières universitaires, des bourses et des parcours de carrière — en français, culturellement pertinent, ancré localement en RDC.</p>
       </div>
       <div class="plat-card">
         <div class="plat-n">04</div>
         <div class="plat-tag" style="color:var(--gold)" data-fr="Carrière · Local + Mondial" data-en="Career · Local + Global">Carrière · Local + Mondial</div>
         <div class="plat-t" data-fr="Créateur de CV & Coach Emploi" data-en="Résumé Builder & Job Coach">Créateur de CV & Coach Emploi</div>
-        <p class="plat-d" data-fr="CV et lettres de motivation en français et anglais pour employeurs de la RDC, ONG (ONU, Banque Mondiale) et marchés diaspora. Préparation aux entretiens incluse." data-en="Resumes and cover letters in French and English for DRC employers, NGOs (UN, World Bank), and diaspora job markets. Interview preparation included.">CV et lettres de motivation en français et anglais pour employeurs de la RDC, ONG (ONU, Banque Mondiale) et marchés diaspora. Préparation aux entretiens incluse.</p>
+        <p class="plat-d" style="font-size:15px" data-fr="CV et lettres de motivation en français et anglais pour employeurs de la RDC, ONG (ONU, Banque Mondiale) et marchés diaspora. Préparation aux entretiens incluse." data-en="Resumes and cover letters in French and English for DRC employers, NGOs (UN, World Bank), and diaspora job markets. Interview preparation included.">CV et lettres de motivation en français et anglais pour employeurs de la RDC, ONG (ONU, Banque Mondiale) et marchés diaspora. Préparation aux entretiens incluse.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:48px">
@@ -350,22 +351,22 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
       <div class="fly-item"><div class="fly-arr">→</div>
         <div class="fly-n">01</div>
         <div class="fly-t" data-fr="Étudiant rejoint" data-en="Student Joins">Étudiant rejoint</div>
-        <p class="fly-d" data-fr="Un élève de Kinshasa accède à EMLink gratuitement via l'Examen d'État" data-en="A student in Kinshasa accesses EMLink free through Exam Prep">Un élève de Kinshasa accède à EMLink gratuitement via l'Examen d'État</p>
+        <p class="fly-d" style="font-size:14px" data-fr="Un élève de Kinshasa accède à EMLink gratuitement via l'Examen d'État" data-en="A student in Kinshasa accesses EMLink free through Exam Prep">Un élève de Kinshasa accède à EMLink gratuitement via l'Examen d'État</p>
       </div>
       <div class="fly-item"><div class="fly-arr">→</div>
         <div class="fly-n">02</div>
         <div class="fly-t" data-fr="Résultats améliorés" data-en="Results Improve">Résultats améliorés</div>
-        <p class="fly-d" data-fr="Scores augmentent. Confiance grandit. L'étudiant voit ce qui est possible." data-en="Scores go up. Confidence builds. The student sees what is possible.">Scores augmentent. Confiance grandit. L'étudiant voit ce qui est possible.</p>
+        <p class="fly-d" style="font-size:14px" data-fr="Scores augmentent. Confiance grandit. L'étudiant voit ce qui est possible." data-en="Scores go up. Confidence builds. The student sees what is possible.">Scores augmentent. Confiance grandit. L'étudiant voit ce qui est possible.</p>
       </div>
       <div class="fly-item"><div class="fly-arr">→</div>
         <div class="fly-n">03</div>
         <div class="fly-t" data-fr="Passe à Pro" data-en="Upgrades to Pro">Passe à Pro</div>
-        <p class="fly-d" data-fr="Débloque Conseiller en Carrière, Assistant Universitaire, Créateur de CV" data-en="Unlocks Career Advisor, University Assistant, Résumé Builder">Débloque Conseiller en Carrière, Assistant Universitaire, Créateur de CV</p>
+        <p class="fly-d" style="font-size:14px" data-fr="Débloque Conseiller en Carrière, Assistant Universitaire, Créateur de CV" data-en="Unlocks Career Advisor, University Assistant, Résumé Builder">Débloque Conseiller en Carrière, Assistant Universitaire, Créateur de CV</p>
       </div>
       <div class="fly-item">
         <div class="fly-n">04</div>
         <div class="fly-t" data-fr="Crée de la richesse" data-en="Creates Wealth">Crée de la richesse</div>
-        <p class="fly-d" data-fr="Obtient un emploi. Retourne dans sa communauté. Finance le prochain étudiant." data-en="Gets a job. Returns to community. Funds the next student.">Obtient un emploi. Retourne dans sa communauté. Finance le prochain étudiant.</p>
+        <p class="fly-d" style="font-size:14px" data-fr="Obtient un emploi. Retourne dans sa communauté. Finance le prochain étudiant." data-en="Gets a job. Returns to community. Funds the next student.">Obtient un emploi. Retourne dans sa communauté. Finance le prochain étudiant.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:48px">
@@ -392,7 +393,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
         <div class="fc-name">Emmanuel Naweji</div>
         <div class="fc-role" data-fr="PDG & Co-Fondateur" data-en="CEO & Co-Founder">PDG & Co-Fondateur</div>
         <div class="fc-loc">📍 <span data-fr="Sioux Falls, Dakota du Sud, USA" data-en="Sioux Falls, South Dakota, USA">Sioux Falls, Dakota du Sud, USA</span></div>
-        <p class="fc-bio" data-fr="Emmanuel Naweji est né en Belgique et a grandi à Kolwezi, RD Congo. Après avoir perdu son père à la fin du lycée, une femme américaine et sa famille ont financé ses études au Zimbabwe puis aux États-Unis. Cet acte de générosité est la philosophie derrière EMLink." data-en="Emmanuel Naweji was born in Belgium and raised in Kolwezi, DR Congo. After losing his father following high school graduation, an American woman and her family funded his studies in Zimbabwe and later in the United States. That act of generosity is the philosophy behind EMLink.">Emmanuel Naweji est né en Belgique et a grandi à Kolwezi, RD Congo. Après avoir perdu son père à la fin du lycée, une femme américaine et sa famille ont financé ses études au Zimbabwe puis aux États-Unis. Cet acte de générosité est la philosophie derrière EMLink.</p>
+        <p class="fc-bio" style="font-size:15px" data-fr="Emmanuel Naweji est né en Belgique et a grandi à Kolwezi, RD Congo. Après avoir perdu son père à la fin du lycée, une femme américaine et sa famille ont financé ses études au Zimbabwe puis aux États-Unis. Cet acte de générosité est la philosophie derrière EMLink." data-en="Emmanuel Naweji was born in Belgium and raised in Kolwezi, DR Congo. After losing his father following high school graduation, an American woman and her family funded his studies in Zimbabwe and later in the United States. That act of generosity is the philosophy behind EMLink.">Emmanuel Naweji est né en Belgique et a grandi à Kolwezi, RD Congo. Après avoir perdu son père à la fin du lycée, une femme américaine et sa famille ont financé ses études au Zimbabwe puis aux États-Unis. Cet acte de générosité est la philosophie derrière EMLink.</p>
         <div class="fc-tags">
           <span class="fc-tag" data-fr="IA & ML" data-en="AI & ML">IA & ML</span>
           <span class="fc-tag" data-fr="Cloud & DevOps" data-en="Cloud & DevOps">Cloud & DevOps</span>
@@ -405,7 +406,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
         <div class="fc-name">Jean Gilbert Mbula Mboma</div>
         <div class="fc-role" data-fr="CTO & Co-Fondateur" data-en="CTO & Co-Founder">CTO & Co-Fondateur</div>
         <div class="fc-loc">📍 <span data-fr="Kinshasa, RD Congo" data-en="Kinshasa, DR Congo">Kinshasa, RD Congo</span></div>
-        <p class="fc-bio" data-fr="Jean Gilbert Mbula Mboma a développé son expertise technique à l'intérieur de la RDC — un système avec presque aucune infrastructure formelle — ce qui est précisément ce qui le rend exceptionnel. Il dirige toute l'architecture de la plateforme depuis Kinshasa, avec des relations directes avec les écoles et les étudiants qu'EMLink est destiné à servir." data-en="Jean Gilbert Mbula Mboma built his technical expertise inside the DR Congo — a system with almost no formal infrastructure — which is precisely what makes him exceptional. He leads all platform architecture from Kinshasa, with direct relationships with the schools and students EMLink was built to serve.">Jean Gilbert Mbula Mboma a développé son expertise technique à l'intérieur de la RDC — un système avec presque aucune infrastructure formelle — ce qui est précisément ce qui le rend exceptionnel. Il dirige toute l'architecture de la plateforme depuis Kinshasa, avec des relations directes avec les écoles et les étudiants qu'EMLink est destiné à servir.</p>
+        <p class="fc-bio" style="font-size:15px" data-fr="Jean Gilbert Mbula Mboma a développé son expertise technique à l'intérieur de la RDC — un système avec presque aucune infrastructure formelle — ce qui est précisément ce qui le rend exceptionnel. Il dirige toute l'architecture de la plateforme depuis Kinshasa, avec des relations directes avec les écoles et les étudiants qu'EMLink est destiné à servir." data-en="Jean Gilbert Mbula Mboma built his technical expertise inside the DR Congo — a system with almost no formal infrastructure — which is precisely what makes him exceptional. He leads all platform architecture from Kinshasa, with direct relationships with the schools and students EMLink was built to serve.">Jean Gilbert Mbula Mboma a développé son expertise technique à l'intérieur de la RDC — un système avec presque aucune infrastructure formelle — ce qui est précisément ce qui le rend exceptionnel. Il dirige toute l'architecture de la plateforme depuis Kinshasa, avec des relations directes avec les écoles et les étudiants qu'EMLink est destiné à servir.</p>
         <div class="fc-tags">
           <span class="fc-tag" data-fr="Architecture Plateforme" data-en="Platform Architecture">Architecture Plateforme</span>
           <span class="fc-tag" data-fr="Responsable Ingénierie" data-en="Engineering Lead">Responsable Ingénierie</span>
@@ -421,22 +422,22 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
   <div class="wrap">
     <div class="o2" data-fr="Modèle Commercial" data-en="Business Model">Modèle Commercial</div>
     <h2 class="ttl2" data-fr="Construit pour <em>durer.</em>" data-en="Built to <em>last.</em>">Construit pour <em>durer.</em></h2>
-    <p class="bod" data-fr="EMLink génère des revenus à trois niveaux — conçus pour être accessibles aux étudiants locaux et abordables pour la diaspora mondiale." data-en="EMLink generates revenue at three levels — designed to be accessible for local students and affordable for the global diaspora.">EMLink génère des revenus à trois niveaux — conçus pour être accessibles aux étudiants locaux et abordables pour la diaspora mondiale.</p>
+    <p class="bod" style="font-size:17px" data-fr="EMLink génère des revenus à trois niveaux — conçus pour être accessibles aux étudiants locaux et abordables pour la diaspora mondiale." data-en="EMLink generates revenue at three levels — designed to be accessible for local students and affordable for the global diaspora.">EMLink génère des revenus à trois niveaux — conçus pour être accessibles aux étudiants locaux et abordables pour la diaspora mondiale.</p>
     <div class="rev-grid">
       <div class="rev-card">
         <div class="rev-phase" data-fr="PHASE 1 · MOIS 1–6" data-en="PHASE 1 · MONTHS 1–6">PHASE 1 · MOIS 1–6</div>
         <div class="rev-t" data-fr="Gratuit + Partenariats" data-en="Free + Partnerships">Gratuit + Partenariats</div>
-        <p class="rev-d" data-fr="Niveau gratuit pour tous les élèves. Partenariats avec les écoles et universités. Jean Gilbert dirige les relations institutionnelles depuis Kinshasa." data-en="Free tier for all students. School and university partnerships. Jean Gilbert leads institutional relationships from Kinshasa.">Niveau gratuit pour tous les élèves. Partenariats avec les écoles et universités. Jean Gilbert dirige les relations institutionnelles depuis Kinshasa.</p>
+        <p class="rev-d" style="font-size:14px" data-fr="Niveau gratuit pour tous les élèves. Partenariats avec les écoles et universités. Jean Gilbert dirige les relations institutionnelles depuis Kinshasa." data-en="Free tier for all students. School and university partnerships. Jean Gilbert leads institutional relationships from Kinshasa.">Niveau gratuit pour tous les élèves. Partenariats avec les écoles et universités. Jean Gilbert dirige les relations institutionnelles depuis Kinshasa.</p>
       </div>
       <div class="rev-card" style="border-color:var(--red)">
         <div class="rev-phase" data-fr="PHASE 2 · MOIS 7–12" data-en="PHASE 2 · MONTHS 7–12">PHASE 2 · MOIS 7–12</div>
         <div class="rev-t" data-fr="Abonnements Pro" data-en="Pro Subscriptions">Abonnements Pro</div>
-        <p class="rev-d" data-fr="$5/mois (annuel) ou $8/mois. Licences pour les sites scolaires. Paiements diaspora en USD/EUR pour les familles en RDC." data-en="$5/month (yearly) or $8/month. School site licenses. Diaspora USD/EUR payments for family members in DRC.">$5/mois (annuel) ou $8/mois. Licences pour les sites scolaires. Paiements diaspora en USD/EUR pour les familles en RDC.</p>
+        <p class="rev-d" style="font-size:14px" data-fr="$5/mois (annuel) ou $8/mois. Licences pour les sites scolaires. Paiements diaspora en USD/EUR pour les familles en RDC." data-en="$5/month (yearly) or $8/month. School site licenses. Diaspora USD/EUR payments for family members in DRC.">$5/mois (annuel) ou $8/mois. Licences pour les sites scolaires. Paiements diaspora en USD/EUR pour les familles en RDC.</p>
       </div>
       <div class="rev-card">
         <div class="rev-phase" data-fr="PHASE 3 · AN 2+" data-en="PHASE 3 · YEAR 2+">PHASE 3 · AN 2+</div>
         <div class="rev-t" data-fr="Portail Emploi + Capital" data-en="Employment Portal + Capital">Portail Emploi + Capital</div>
-        <p class="rev-d" data-fr="Frais de recrutement via le Portail d'Emploi. Partenariats ONG. Expansion à travers l'Afrique francophone." data-en="Employer recruitment fees via Employment Portal. NGO partnerships. Expansion across Francophone Africa.">Frais de recrutement via le Portail d'Emploi. Partenariats ONG. Expansion à travers l'Afrique francophone.</p>
+        <p class="rev-d" style="font-size:14px" data-fr="Frais de recrutement via le Portail d'Emploi. Partenariats ONG. Expansion à travers l'Afrique francophone." data-en="Employer recruitment fees via Employment Portal. NGO partnerships. Expansion across Francophone Africa.">Frais de recrutement via le Portail d'Emploi. Partenariats ONG. Expansion à travers l'Afrique francophone.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:48px">
@@ -475,100 +476,6 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
 
 </div><!-- end screen-home -->
 
-<!-- ══ PROJECT MANAGEMENT ══ -->
-<div id="screen-project-management" class="screen">
-
-<nav class="hnav">
-  <div style="display:flex;align-items:center;gap:16px">
-    <div class="nav-logo" onclick="goTo('home')">EM<span>Link</span></div>
-    <span class="pat">⚖ <span data-fr="Brevet en cours" data-en="Patent pending">Brevet en cours</span></span>
-  </div>
-  <div style="display:flex;align-items:center;gap:32px">
-    <button onclick="goTo('home')" style="font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--body);letter-spacing:.04em" data-fr="← Retour" data-en="← Back">← Retour</button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" style="min-height:60vh;background:var(--bg)">
-  <div class="h-eye" data-fr="Gestion de Projet · Interne" data-en="Project Management · Internal">Gestion de Projet · Interne</div>
-  <h1 class="h-title" data-fr="Construire EMLink,<br><em>ensemble.</em>" data-en="Building EMLink,<br><em>together.</em>">Construire EMLink,<br><em>ensemble.</em></h1>
-  <div class="h-sub" data-fr="Kinshasa · Sioux Falls · Un seul cap." data-en="Kinshasa · Sioux Falls · One direction.">Kinshasa · Sioux Falls · Un seul cap.</div>
-  <p class="h-body" data-fr="Un espace centralisé pour suivre les tâches, coordonner les équipes et avancer vers la mission." data-en="A centralized space to track tasks, coordinate teams, and move toward the mission.">Un espace centralisé pour suivre les tâches, coordonner les équipes et avancer vers la mission.</p>
-</section>
-
-<!-- FEATURES -->
-<section class="sec" style="background:white">
-  <div class="wrap">
-    <div class="o2" data-fr="Ce que ça couvre" data-en="What it covers">Ce que ça couvre</div>
-    <h2 class="ttl2" data-fr="Tout ce dont l'équipe <em>a besoin.</em>" data-en="Everything the team <em>needs.</em>">Tout ce dont l'équipe <em>a besoin.</em></h2>
-    <p class="bod" data-fr="De la planification des sprints au suivi des bugs — un seul endroit pour garder tout le monde aligné." data-en="From sprint planning to bug tracking — one place to keep everyone aligned.">De la planification des sprints au suivi des bugs — un seul endroit pour garder tout le monde aligné.</p>
-    <div class="plat-grid">
-      <div class="plat-card">
-        <div class="plat-n">01</div>
-        <div class="plat-tag" style="color:var(--red)" data-fr="Coordination" data-en="Coordination">Coordination</div>
-        <div class="plat-t" data-fr="Suivi des Tâches" data-en="Task Tracking">Suivi des Tâches</div>
-        <p class="plat-d" data-fr="Créez, assignez et suivez les tâches par sprint. Visibilité complète sur ce qui avance et ce qui bloque." data-en="Create, assign and track tasks by sprint. Full visibility on what's moving and what's blocked.">Créez, assignez et suivez les tâches par sprint. Visibilité complète sur ce qui avance et ce qui bloque.</p>
-      </div>
-      <div class="plat-card">
-        <div class="plat-n">02</div>
-        <div class="plat-tag" style="color:var(--red)" data-fr="Vision" data-en="Vision">Vision</div>
-        <div class="plat-t" data-fr="Roadmap Produit" data-en="Product Roadmap">Roadmap Produit</div>
-        <p class="plat-d" data-fr="Visualisez les grandes étapes — de la beta à l'expansion en Afrique francophone — et gardez le cap." data-en="Visualize milestones — from beta to francophone Africa expansion — and stay on track.">Visualisez les grandes étapes — de la beta à l'expansion en Afrique francophone — et gardez le cap.</p>
-      </div>
-      <div class="plat-card">
-        <div class="plat-n">03</div>
-        <div class="plat-tag" style="color:var(--red)" data-fr="Qualité" data-en="Quality">Qualité</div>
-        <div class="plat-t" data-fr="Suivi des Bugs" data-en="Bug Tracking">Suivi des Bugs</div>
-        <p class="plat-d" data-fr="Rapportez, priorisez et résolvez les problèmes techniques rapidement. Moins de friction, plus de vitesse." data-en="Report, prioritize and resolve technical issues fast. Less friction, more velocity.">Rapportez, priorisez et résolvez les problèmes techniques rapidement. Moins de friction, plus de vitesse.</p>
-      </div>
-      <div class="plat-card">
-        <div class="plat-n">04</div>
-        <div class="plat-tag" style="color:var(--red)" data-fr="Équipe" data-en="Team">Équipe</div>
-        <div class="plat-t" data-fr="Coordination d'Équipe" data-en="Team Coordination">Coordination d'Équipe</div>
-        <p class="plat-d" data-fr="Synchronisez Kinshasa et Sioux Falls. Chaque membre sait ce qu'il fait, pourquoi, et pour quand." data-en="Sync Kinshasa and Sioux Falls. Every member knows what they're doing, why, and by when.">Synchronisez Kinshasa et Sioux Falls. Chaque membre sait ce qu'il fait, pourquoi, et pour quand.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATUS -->
-<section class="sec" style="background:var(--bg)">
-  <div class="wrap">
-    <div class="o2" data-fr="État actuel" data-en="Current Status">État actuel</div>
-    <h2 class="ttl2" data-fr="Où en <em>est-on ?</em>" data-en="Where do <em>we stand?</em>">Où en <em>est-on ?</em></h2>
-    <div class="gap-grid">
-      <div style="border:1px solid var(--border);padding:40px;background:white">
-        <div class="gap-tag" data-fr="EN LIGNE" data-en="LIVE">EN LIGNE</div>
-        <div class="gi">✅ <span data-fr="Plateforme éducative" data-en="Education platform">Plateforme éducative</span></div>
-        <div class="gi">✅ <span data-fr="Chat IA" data-en="AI Chat">Chat IA</span></div>
-        <div class="gi">✅ <span data-fr="Portail d'Emploi" data-en="Job Portal">Portail d'Emploi</span></div>
-      </div>
-      <div class="gap-side w">
-        <div class="gap-tag" data-fr="EN COURS / PLANIFIÉ" data-en="IN PROGRESS / PLANNED">EN COURS / PLANIFIÉ</div>
-        <div class="gi">🔶 <span data-fr="Programme Mentorat Cohort" data-en="Cohort Mentorship Program">Programme Mentorat Cohort</span></div>
-        <div class="gi">🔶 <span data-fr="IA Étudiant — couche suivante" data-en="Student AI — next layer">IA Étudiant — couche suivante</span></div>
-        <div class="gi">⬜ <span data-fr="Expansion Afrique francophone" data-en="Francophone Africa expansion">Expansion Afrique francophone</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<div class="cta-sec">
-  <div class="cta-t" data-fr="Aucun jeune ne sera<br><em>laissé pour compte.</em>" data-en="No youth will be<br><em>left behind.</em>">Aucun jeune ne sera<br><em>laissé pour compte.</em></div>
-  <p class="cta-s" data-fr="Pas à Kolwezi. Pas à Kinshasa. Nulle part." data-en="Not in Kolwezi. Not in Kinshasa. Not anywhere.">Pas à Kolwezi. Pas à Kinshasa. Nulle part.</p>
-  <button onclick="goTo('home')" class="btn-wh" data-fr="← Retour au site" data-en="← Back to site">← Retour au site</button>
-</div>
-
-<footer>
-  <div>
-    <div class="ft-logo">EM<span>Link</span></div>
-    <div style="font-size:12px;color:var(--muted);margin-top:6px" data-fr="Plateforme IA · Éducation · RDC" data-en="AI Platform · Education · DRC">Plateforme IA · Éducation · RDC</div>
-  </div>
-  <div style="font-size:12px;color:var(--muted)" data-fr="© 2026 EMLink. Tous droits réservés." data-en="© 2026 EMLink. All rights reserved.">© 2026 EMLink. Tous droits réservés.</div>
-</footer>
-
-</div><!-- end screen-project-management -->
 
 <!-- ══ LOGIN ══ -->
 <div id="screen-login" class="screen">
@@ -613,6 +520,10 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
       <button class="nl" onclick="goTo('dashboard')" data-fr="Tableau de bord" data-en="Dashboard">Tableau de bord</button>
       <button class="nl" onclick="goTo('pricing')" data-fr="Tarifs" data-en="Pricing">Tarifs</button>
       <button class="nav-cta" id="upgrade-nav-btn" onclick="goTo('pricing')" data-fr="Passer à Pro" data-en="Upgrade to Pro">Passer à Pro</button>
+      <div style="display:flex;gap:5px;align-items:center">
+        <button class="lang-btn active" onclick="setLang('fr')" style="font-size:11px;padding:4px 12px">FR</button>
+        <button class="lang-btn" onclick="setLang('en')" style="font-size:11px;padding:4px 12px">EN</button>
+      </div>
       <button class="nl" onclick="doLogout()" data-fr="Déconnexion" data-en="Logout">Déconnexion</button>
     </div>
   </div>
@@ -649,7 +560,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
         <div class="module-icon">📚</div>
         <div class="module-sub" style="color:var(--red)" data-fr="EXAMEN D'ÉTAT · EPST · GRATUIT" data-en="STATE EXAM · EPST · FREE">EXAMEN D'ÉTAT · EPST · GRATUIT</div>
         <div class="module-title" data-fr="Préparation aux Examens" data-en="Exam Prep AI">Préparation aux Examens</div>
-        <div class="module-desc" data-fr="Questions de pratique en français, explications étape par étape, suivi de tes points faibles." data-en="French-language practice questions, step-by-step explanations, tracking your weak areas.">Questions de pratique en français, explications étape par étape, suivi de tes points faibles.</div>
+        <div class="module-desc" style="font-size:14px" data-fr="Questions de pratique en français, explications étape par étape, suivi de tes points faibles." data-en="French-language practice questions, step-by-step explanations, tracking your weak areas.">Questions de pratique en français, explications étape par étape, suivi de tes points faibles.</div>
         <div style="margin-top:16px"><span class="pill pill-green">✓ <span data-fr="Inclus gratuitement" data-en="Free included">Inclus gratuitement</span></span></div>
       </div>
       <div class="module-card fade-up locked" id="card-university" style="border-left:4px solid var(--navy);animation-delay:.1s" onclick="goTo('pricing')">
@@ -657,7 +568,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
         <div class="module-icon">🎓</div>
         <div class="module-sub" style="color:var(--navy)" data-fr="UNIKIN · UPC · UNIVERSITÉ" data-en="UNIKIN · UPC · UNIVERSITY">UNIKIN · UPC · UNIVERSITÉ</div>
         <div class="module-title" data-fr="Assistant Universitaire" data-en="University Assistant">Assistant Universitaire</div>
-        <div class="module-desc" data-fr="Aide pour les travaux de recherche, structurer tes arguments, préparer les examens oraux et écrits." data-en="Help with research papers, structuring arguments, preparing oral and written exams.">Aide pour les travaux de recherche, structurer tes arguments, préparer les examens oraux et écrits.</div>
+        <div class="module-desc" style="font-size:14px" data-fr="Aide pour les travaux de recherche, structurer tes arguments, préparer les examens oraux et écrits." data-en="Help with research papers, structuring arguments, preparing oral and written exams.">Aide pour les travaux de recherche, structurer tes arguments, préparer les examens oraux et écrits.</div>
         <div style="margin-top:16px"><span class="pill pill-navy" id="pill-university">🔒 <span data-fr="Abonnement Pro requis" data-en="Pro subscription required">Abonnement Pro requis</span></span></div>
       </div>
       <div class="module-card fade-up locked" id="card-career" style="border-left:4px solid var(--green);animation-delay:.2s" onclick="goTo('pricing')">
@@ -665,7 +576,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
         <div class="module-icon">🌍</div>
         <div class="module-sub" style="color:var(--green)" data-fr="ORIENTATION · APRÈS L'ÉCOLE" data-en="GUIDANCE · AFTER SCHOOL">ORIENTATION · APRÈS L'ÉCOLE</div>
         <div class="module-title" data-fr="Conseiller en Carrière" data-en="Career Path Advisor">Conseiller en Carrière</div>
-        <div class="module-desc" data-fr="Cartographie tes forces vers des parcours universitaires, bourses d'études et opportunités locales et internationales." data-en="Map your strengths to university paths, scholarships, and local and international opportunities.">Cartographie tes forces vers des parcours universitaires, bourses d'études et opportunités locales et internationales.</div>
+        <div class="module-desc" style="font-size:14px" data-fr="Cartographie tes forces vers des parcours universitaires, bourses d'études et opportunités locales et internationales." data-en="Map your strengths to university paths, scholarships, and local and international opportunities.">Cartographie tes forces vers des parcours universitaires, bourses d'études et opportunités locales et internationales.</div>
         <div style="margin-top:16px"><span class="pill pill-navy" id="pill-career">🔒 <span data-fr="Abonnement Pro requis" data-en="Pro subscription required">Abonnement Pro requis</span></span></div>
       </div>
       <div class="module-card fade-up locked" id="card-resume" style="border-left:4px solid var(--gold);animation-delay:.3s" onclick="goTo('pricing')">
@@ -673,7 +584,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
         <div class="module-icon">📄</div>
         <div class="module-sub" style="color:var(--gold)" data-fr="CV · LETTRE DE MOTIVATION" data-en="RESUME · COVER LETTER">CV · LETTRE DE MOTIVATION</div>
         <div class="module-title" data-fr="Créateur de CV" data-en="Résumé Builder">Créateur de CV</div>
-        <div class="module-desc" data-fr="CV professionnels en français et anglais pour employeurs locaux, ONG internationales et marchés diaspora." data-en="Professional resumes in French and English for local employers, international NGOs, and diaspora job markets.">CV professionnels en français et anglais pour employeurs locaux, ONG internationales et marchés diaspora.</div>
+        <div class="module-desc" style="font-size:14px" data-fr="CV professionnels en français et anglais pour employeurs locaux, ONG internationales et marchés diaspora." data-en="Professional resumes in French and English for local employers, international NGOs, and diaspora job markets.">CV professionnels en français et anglais pour employeurs locaux, ONG internationales et marchés diaspora.</div>
         <div style="margin-top:16px"><span class="pill pill-navy" id="pill-resume">🔒 <span data-fr="Abonnement Pro requis" data-en="Pro subscription required">Abonnement Pro requis</span></span></div>
       </div>
     </div>
