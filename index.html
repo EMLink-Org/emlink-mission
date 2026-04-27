@@ -213,6 +213,7 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
     <a href="#story" style="font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Histoire" data-en="Story">Histoire</a>
     <a href="#platform" style="font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Plateforme" data-en="Platform">Plateforme</a>
     <a href="#founders" style="font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.04em" data-fr="Fondateurs" data-en="Founders">Fondateurs</a>
+    <button onclick="goTo('project-management')" style="font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--body);letter-spacing:.04em" data-fr="Gestion de Projet" data-en="Project Management">Gestion de Projet</button>
     <button onclick="goTo('pricing')" style="font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--body);letter-spacing:.04em" data-fr="Tarifs" data-en="Pricing">Tarifs</button>
     <button onclick="goTo('login')" class="btn-cta" data-fr="Lancer l'app →" data-en="Launch App →">Lancer l'app →</button>
   </div>
@@ -474,6 +475,100 @@ footer{background:white;padding:56px;display:grid;grid-template-columns:1fr auto
 
 </div><!-- end screen-home -->
 
+<!-- ══ PROJECT MANAGEMENT ══ -->
+<div id="screen-project-management" class="screen">
+
+<nav class="hnav">
+  <div style="display:flex;align-items:center;gap:16px">
+    <div class="nav-logo" onclick="goTo('home')">EM<span>Link</span></div>
+    <span class="pat">⚖ <span data-fr="Brevet en cours" data-en="Patent pending">Brevet en cours</span></span>
+  </div>
+  <div style="display:flex;align-items:center;gap:32px">
+    <button onclick="goTo('home')" style="font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--body);letter-spacing:.04em" data-fr="← Retour" data-en="← Back">← Retour</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="min-height:60vh;background:var(--bg)">
+  <div class="h-eye" data-fr="Gestion de Projet · Interne" data-en="Project Management · Internal">Gestion de Projet · Interne</div>
+  <h1 class="h-title" data-fr="Construire EMLink,<br><em>ensemble.</em>" data-en="Building EMLink,<br><em>together.</em>">Construire EMLink,<br><em>ensemble.</em></h1>
+  <div class="h-sub" data-fr="Kinshasa · Sioux Falls · Un seul cap." data-en="Kinshasa · Sioux Falls · One direction.">Kinshasa · Sioux Falls · Un seul cap.</div>
+  <p class="h-body" data-fr="Un espace centralisé pour suivre les tâches, coordonner les équipes et avancer vers la mission." data-en="A centralized space to track tasks, coordinate teams, and move toward the mission.">Un espace centralisé pour suivre les tâches, coordonner les équipes et avancer vers la mission.</p>
+</section>
+
+<!-- FEATURES -->
+<section class="sec" style="background:white">
+  <div class="wrap">
+    <div class="o2" data-fr="Ce que ça couvre" data-en="What it covers">Ce que ça couvre</div>
+    <h2 class="ttl2" data-fr="Tout ce dont l'équipe <em>a besoin.</em>" data-en="Everything the team <em>needs.</em>">Tout ce dont l'équipe <em>a besoin.</em></h2>
+    <p class="bod" data-fr="De la planification des sprints au suivi des bugs — un seul endroit pour garder tout le monde aligné." data-en="From sprint planning to bug tracking — one place to keep everyone aligned.">De la planification des sprints au suivi des bugs — un seul endroit pour garder tout le monde aligné.</p>
+    <div class="plat-grid">
+      <div class="plat-card">
+        <div class="plat-n">01</div>
+        <div class="plat-tag" style="color:var(--red)" data-fr="Coordination" data-en="Coordination">Coordination</div>
+        <div class="plat-t" data-fr="Suivi des Tâches" data-en="Task Tracking">Suivi des Tâches</div>
+        <p class="plat-d" data-fr="Créez, assignez et suivez les tâches par sprint. Visibilité complète sur ce qui avance et ce qui bloque." data-en="Create, assign and track tasks by sprint. Full visibility on what's moving and what's blocked.">Créez, assignez et suivez les tâches par sprint. Visibilité complète sur ce qui avance et ce qui bloque.</p>
+      </div>
+      <div class="plat-card">
+        <div class="plat-n">02</div>
+        <div class="plat-tag" style="color:var(--red)" data-fr="Vision" data-en="Vision">Vision</div>
+        <div class="plat-t" data-fr="Roadmap Produit" data-en="Product Roadmap">Roadmap Produit</div>
+        <p class="plat-d" data-fr="Visualisez les grandes étapes — de la beta à l'expansion en Afrique francophone — et gardez le cap." data-en="Visualize milestones — from beta to francophone Africa expansion — and stay on track.">Visualisez les grandes étapes — de la beta à l'expansion en Afrique francophone — et gardez le cap.</p>
+      </div>
+      <div class="plat-card">
+        <div class="plat-n">03</div>
+        <div class="plat-tag" style="color:var(--red)" data-fr="Qualité" data-en="Quality">Qualité</div>
+        <div class="plat-t" data-fr="Suivi des Bugs" data-en="Bug Tracking">Suivi des Bugs</div>
+        <p class="plat-d" data-fr="Rapportez, priorisez et résolvez les problèmes techniques rapidement. Moins de friction, plus de vitesse." data-en="Report, prioritize and resolve technical issues fast. Less friction, more velocity.">Rapportez, priorisez et résolvez les problèmes techniques rapidement. Moins de friction, plus de vitesse.</p>
+      </div>
+      <div class="plat-card">
+        <div class="plat-n">04</div>
+        <div class="plat-tag" style="color:var(--red)" data-fr="Équipe" data-en="Team">Équipe</div>
+        <div class="plat-t" data-fr="Coordination d'Équipe" data-en="Team Coordination">Coordination d'Équipe</div>
+        <p class="plat-d" data-fr="Synchronisez Kinshasa et Sioux Falls. Chaque membre sait ce qu'il fait, pourquoi, et pour quand." data-en="Sync Kinshasa and Sioux Falls. Every member knows what they're doing, why, and by when.">Synchronisez Kinshasa et Sioux Falls. Chaque membre sait ce qu'il fait, pourquoi, et pour quand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS -->
+<section class="sec" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="o2" data-fr="État actuel" data-en="Current Status">État actuel</div>
+    <h2 class="ttl2" data-fr="Où en <em>est-on ?</em>" data-en="Where do <em>we stand?</em>">Où en <em>est-on ?</em></h2>
+    <div class="gap-grid">
+      <div style="border:1px solid var(--border);padding:40px;background:white">
+        <div class="gap-tag" data-fr="EN LIGNE" data-en="LIVE">EN LIGNE</div>
+        <div class="gi">✅ <span data-fr="Plateforme éducative" data-en="Education platform">Plateforme éducative</span></div>
+        <div class="gi">✅ <span data-fr="Chat IA" data-en="AI Chat">Chat IA</span></div>
+        <div class="gi">✅ <span data-fr="Portail d'Emploi" data-en="Job Portal">Portail d'Emploi</span></div>
+      </div>
+      <div class="gap-side w">
+        <div class="gap-tag" data-fr="EN COURS / PLANIFIÉ" data-en="IN PROGRESS / PLANNED">EN COURS / PLANIFIÉ</div>
+        <div class="gi">🔶 <span data-fr="Programme Mentorat Cohort" data-en="Cohort Mentorship Program">Programme Mentorat Cohort</span></div>
+        <div class="gi">🔶 <span data-fr="IA Étudiant — couche suivante" data-en="Student AI — next layer">IA Étudiant — couche suivante</span></div>
+        <div class="gi">⬜ <span data-fr="Expansion Afrique francophone" data-en="Francophone Africa expansion">Expansion Afrique francophone</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-sec">
+  <div class="cta-t" data-fr="Aucun jeune ne sera<br><em>laissé pour compte.</em>" data-en="No youth will be<br><em>left behind.</em>">Aucun jeune ne sera<br><em>laissé pour compte.</em></div>
+  <p class="cta-s" data-fr="Pas à Kolwezi. Pas à Kinshasa. Nulle part." data-en="Not in Kolwezi. Not in Kinshasa. Not anywhere.">Pas à Kolwezi. Pas à Kinshasa. Nulle part.</p>
+  <button onclick="goTo('home')" class="btn-wh" data-fr="← Retour au site" data-en="← Back to site">← Retour au site</button>
+</div>
+
+<footer>
+  <div>
+    <div class="ft-logo">EM<span>Link</span></div>
+    <div style="font-size:12px;color:var(--muted);margin-top:6px" data-fr="Plateforme IA · Éducation · RDC" data-en="AI Platform · Education · DRC">Plateforme IA · Éducation · RDC</div>
+  </div>
+  <div style="font-size:12px;color:var(--muted)" data-fr="© 2026 EMLink. Tous droits réservés." data-en="© 2026 EMLink. All rights reserved.">© 2026 EMLink. Tous droits réservés.</div>
+</footer>
+
+</div><!-- end screen-project-management -->
 
 <!-- ══ LOGIN ══ -->
 <div id="screen-login" class="screen">
