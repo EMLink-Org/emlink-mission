@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMLink — Gestion de Projet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0a0f1e;
+      --bg-secondary: #111827;
+      --bg-card: #1a2235;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent: #f97316;
+      --accent-hover: #ea6c0a;
+      --border: #1e2d45;
+      --font: 'Inter', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 15, 30, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text-primary); }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* SECTION */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    /* FEATURES GRID */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(249, 115, 22, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .feature-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* STATUS SECTION */
+    .status-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .status-section > div {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .status-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .status-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .status-list li .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-green { background: #22c55e; }
+    .dot-orange { background: var(--accent); }
+    .dot-gray { background: #475569; }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, #0d1526 100%);
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .status-section > div { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">EM<span>Link</span></a>
+    <ul class="nav-links">
+      <li><a href="/#histoire">Histoire</a></li>
+      <li><a href="/#plateforme">Plateforme</a></li>
+      <li><a href="/#fondateurs">Fondateurs</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge">Gestion de Projet · Interne</div>
+    <h1>Construire EMLink,<br /><em>ensemble.</em></h1>
+    <p>
+      Un espace centralisé pour suivre les tâches, coordonner les équipes entre Kinshasa et Sioux Falls, et avancer vers la mission.
+    </p>
+    <a href="#outils" class="btn-primary">Voir les outils →</a>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="outils">
+    <div class="section-label">Ce que ça couvre</div>
+    <h2 class="section-title">Tout ce dont l'équipe a besoin.</h2>
+    <p class="section-subtitle">
+      De la planification des sprints au suivi des bugs — un seul endroit pour garder tout le monde aligné.
+    </p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-number">01</div>
+        <div class="feature-icon">📋</div>
+        <h3>Suivi des Tâches</h3>
+        <p>Créez, assignez et suivez les tâches par sprint. Visibilité complète sur ce qui avance et ce qui bloque.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-number">02</div>
+        <div class="feature-icon">🗺️</div>
+        <h3>Roadmap Produit</h3>
+        <p>Visualisez les grandes étapes — de la beta à l'expansion en Afrique francophone — et gardez le cap.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-number">03</div>
+        <div class="feature-icon">🐛</div>
+        <h3>Suivi des Bugs</h3>
+        <p>Rapportez, priorisez et résolvez les problèmes techniques rapidement. Moins de friction, plus de vitesse.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-number">04</div>
+        <div class="feature-icon">🤝</div>
+        <h3>Coordination d'Équipe</h3>
+        <p>Synchronisez Kinshasa et Sioux Falls. Chaque membre sait ce qu'il fait, pourquoi, et pour quand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS -->
+  <div class="status-section">
+    <div>
+      <div>
+        <div class="section-label">État actuel</div>
+        <h2 class="section-title">Où en est-on ?</h2>
+        <p class="section-subtitle">
+          Un aperçu rapide de l'avancement des grandes initiatives EMLink.
+        </p>
+      </div>
+      <ul class="status-list">
+        <li><span class="dot dot-green"></span> Plateforme éducative — En ligne</li>
+        <li><span class="dot dot-green"></span> Chat IA — En ligne</li>
+        <li><span class="dot dot-green"></span> Portail d'Emploi — En ligne</li>
+        <li><span class="dot dot-orange"></span> Programme Mentorat Cohort — En cours</li>
+        <li><span class="dot dot-orange"></span> IA Étudiant (couche suivante) — En développement</li>
+        <li><span class="dot dot-gray"></span> Expansion Afrique francophone — Planifié</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-label">Phases</div>
+      <h2 class="section-title">Le plan.</h2>
+      <div style="display:flex;flex-direction:column;gap:1.25rem;margin-top:1.5rem;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;">
+          <div style="font-size:0.75rem;color:var(--accent);font-weight:700;margin-bottom:0.25rem;">PHASE 1 · MOIS 1–6</div>
+          <div style="font-weight:600;margin-bottom:0.25rem;">Gratuit + Partenariats</div>
+          <div style="color:var(--text-secondary);font-size:0.875rem;">Niveau gratuit, partenariats écoles et universités.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;">
+          <div style="font-size:0.75rem;color:var(--accent);font-weight:700;margin-bottom:0.25rem;">PHASE 2 · MOIS 7–12</div>
+          <div style="font-weight:600;margin-bottom:0.25rem;">Abonnements Pro</div>
+          <div style="color:var(--text-secondary);font-size:0.875rem;">$5/mois · Licences scolaires · Paiements diaspora.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;">
+          <div style="font-size:0.75rem;color:var(--accent);font-weight:700;margin-bottom:0.25rem;">PHASE 3 · AN 2+</div>
+          <div style="font-weight:600;margin-bottom:0.25rem;">Portail Emploi + Capital</div>
+          <div style="color:var(--text-secondary);font-size:0.875rem;">Frais recrutement · ONG · Expansion Afrique.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Aucun jeune ne sera<br />laissé pour compte.</h2>
+    <p>Pas à Kolwezi. Pas à Kinshasa. Nulle part.</p>
+    <a href="/" class="btn-primary">← Retour au site principal</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 EMLink. Tous droits réservés. · <a href="/">emlinkapp.com</a></p>
+  </footer>
+
+</body>
+</html>
